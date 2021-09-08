@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace App;
 
-require_once '../vendor/autoload.php';
-
 class Money
 {
     private int|float $amount;
