@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App;
@@ -10,7 +11,6 @@ class Currency
     public function __construct(string $isoCode)
     {
         $this->setIsoCode($isoCode);
-
     }
 
     private function setIsoCode(string $isoCode): void
@@ -22,7 +22,6 @@ class Currency
         }
 
         $this->isoCode = $isoCode;
-
     }
 
     public function getIsoCode(): string
@@ -34,14 +33,4 @@ class Currency
     {
         return $this->getIsoCode() == $currency->getIsoCode();
     }
-
 }
-
-//$currency1 = new Currency('JJJ');
-//$currency2 = new Currency('JJJ');
-//
-//$result = $currency1->equals($currency2);
-//
-//var_dump($currency1);
-//var_dump($currency2);
-//var_dump($result);

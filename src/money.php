@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App;
@@ -12,7 +13,6 @@ class Money
     {
         $this->setAmount($amount);
         $this->setCurrency($currency);
-
     }
 
     private function setAmount(int|float $amount): void
@@ -37,7 +37,8 @@ class Money
 
     public function equals(Money $money): bool
     {
-        //  return ($this->getAmount() == $money->getAmount() && $this->getCurrency()->getIsoCode() == $money->getCurrency()->getIsoCode());
+        //  return ($this->getAmount() == $money->getAmount() && $this->getCurrency()->getIsoCode() ==
+        // $money->getCurrency()->getIsoCode());
         return ($this->getAmount() == $money->getAmount() && $this->getCurrency()->equals($money->getCurrency()));
     }
 
@@ -50,4 +51,3 @@ class Money
         //return  clone $this;
     }
 }
-
